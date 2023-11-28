@@ -2,6 +2,8 @@
 #include <windows.h>
 #include <locale.h>
 
+int loading = 0;
+
 
 int main()
 {
@@ -12,7 +14,7 @@ int main()
 
 	setlocale(LC_ALL, "Portuguese");
 
-	printf("\tOlá, infomática\n");
+	printf("\tOlï¿½, infomï¿½tica\n");
 	Sleep(2000);
 	printf("\tINICIAR SISTEMA...\n");
 	Sleep(2000);
@@ -23,22 +25,9 @@ int main()
 
 
 	Sleep(5000);
-	system("cls");
-	printf("Carregando 1% ");
-	Sleep(500);
-	system("cls");
-	printf("Carregando 2% ");
-	Sleep(500);
-	system("cls");
-	printf("Carregando 3% ");
-	Sleep(500);
-	system("cls");
-	printf("Carregando 4% ");
-	Sleep(500);
-	system("cls");
-	printf("Carregando 5% ");
-	Sleep(500);
-	system("cls");
+do{
+	printf("Carregando ", &loading) & loading++;
+}; while (&loading <= 5);
 
 	printf("#     #\n");
 	printf("#     #  ####  #####   ##   #####  #    #\n");
@@ -50,7 +39,7 @@ int main()
 
 
 	system("COLOR 2F");
-	printf("DIGITE UMA OPÇÃO DE BOOT: \n");
+	printf("DIGITE UMA OPï¿½ï¿½O DE BOOT: \n");
 	printf("\n \t1 - USB\n \t2 - HDD\n \t3 - CD-ROM\n");
 	int opcao;
 	scanf("%i", &opcao);
@@ -77,7 +66,7 @@ int main()
 
 
 	default:
-		printf("\tOpção invalida\n");
+		printf("\tOpï¿½ï¿½o invalida\n");
 		printf("\tReniciando o sistema\n");
 		break;
 
